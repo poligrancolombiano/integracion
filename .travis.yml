@@ -1,0 +1,9 @@
+language: java
+branches:
+ only:
+   - master
+   - develop
+
+before-script:
+script:
+- mvn verify
