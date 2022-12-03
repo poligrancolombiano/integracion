@@ -6,4 +6,4 @@ branches:
 
 before-script:
 script:
-- mvn verify
+  - ./gradlew build --scan -s
