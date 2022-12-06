@@ -24,7 +24,7 @@ public class IntegracionApplication {
     public String listAll(Model model) {
         List<User> listUsers = repo.findAll();
         model.addAttribute("listUsers", listUsers);
-        return "users" + listUsers;
+        return "users--TEST" + listUsers;
     }
 
 }
