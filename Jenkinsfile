@@ -39,7 +39,7 @@ fi'''
 
     stage('run-docker') {
       steps {
-        sh '''docker run -d -p 9090:9090 integracion --network mysql_net integracion
+        sh '''docker run -p 9090:9090 integracion --network mysql_net integracion
         '''
       }
     }
