@@ -5,6 +5,8 @@ pipeline {
       steps {
         sh 'chmod +x gradlew'
         sh './gradlew clean build'
+        sh 'chmod 666 /var/run/docker.sock'
+        sh 'docker-compose -f ../docker-mysql/docker-compose.yaml up -d'
         sh 'sysctl -w net.ipv4.ip_forward=1'
       }
     }
