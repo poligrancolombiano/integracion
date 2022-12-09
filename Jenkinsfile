@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('build-maven') {
+    stage('build-gradle') {
       steps {
         sh 'chmod +x gradlew'
         sh './gradlew clean build'
@@ -37,7 +37,7 @@ fi'''
 
     stage('run-docker') {
       steps {
-        sh '''docker run -p 9090:9090 integracion --network mysql_net integracion
+        sh '''docker run -p 9090:9090 --network mysql_net integracion
         '''
       }
     }
