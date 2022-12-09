@@ -5,7 +5,6 @@ pipeline {
       steps {
         sh 'chmod +x gradlew'
         sh './gradlew clean build'
-        sh 'sysctl -w net.ipv4.ip_forward=1'
       }
     }
 
